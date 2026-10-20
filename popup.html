@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Spotlight</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <span class="title">Privacy Spotlight</span> <span id="pill" class="pill">Free</span>
+  </header>
+
+  <label class="main">
+    <input type="checkbox" id="mainSwitch">
+    <span class="slider"></span>
+    <span id="mainLabel">Blur this tab</span>
+  </label>
+  <p id="unsupported" class="muted" hidden>Can't blur this page</p>
+
+  <hr>
+
+  <div class="row" data-pro data-key="radius">
+    <span class="lbl">Spotlight size <span class="lock">&#128274;</span></span>
+    <input type="range" id="radius">
+    <span class="val" id="radius-val"></span>
+  </div>
+
+  <div class="row" data-pro data-key="blur">
+    <span class="lbl">Blur strength <span class="lock">&#128274;</span></span>
+    <input type="range" id="blur">
+    <span class="val" id="blur-val"></span>
+  </div>
+
+  <div class="row" data-pro data-key="feather">
+    <span class="lbl">Fade softness <span class="lock">&#128274;</span></span>
+    <input type="range" id="feather">
+    <span class="val" id="feather-val"></span>
+  </div>
+
+  <div class="row" data-pro data-key="dim">
+    <span class="lbl">Dim outside <span class="lock">&#128274;</span></span>
+    <input type="range" id="dim">
+    <span class="val" id="dim-val"></span>
+  </div>
+
+  <div class="row" data-pro id="allTabsRow">
+    <span class="lbl">All tabs <span class="lock">&#128274;</span></span>
+    <label class="sw">
+      <input type="checkbox" id="allTabs">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <hr>
+
+  <footer>
+    <a href="#" id="upgradeLink">Upgrade to Pro</a>
+    <a href="#" id="restoreLink" class="small">Restore purchase</a>
+    <p id="hint" class="muted">Shortcut (Pro): Alt+Shift+B</p>
+  </footer>
+
+  <script src="config.js"></script><script src="ExtPay.js"></script><script src="popup.js"></script>
+</body>
+</html>
